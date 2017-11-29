@@ -10,14 +10,6 @@ var connection = mysql.createConnection({
 //    socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
-var pool  = mysql.createPool({
-  connectionLimit : 10,
-  host            : "us-cdbr-iron-east-05.cleardb.net" || "localhost",
-  user            : "bbe26416610a5f" || "root",
-  password        : "898d203a" || "FreshChoice1",
-  database        : "heroku_ffde5ca58101024" || "burgers_db"
-});
-
 // Make connection.
 connection.connect(function(err) {
   if (err) {
@@ -29,7 +21,4 @@ connection.connect(function(err) {
 
 
 // Export connection for our ORM to use.
-module.exports = {
-    connection: connection,
-    pool: pool
-};
+module.exports = connection;
