@@ -10,6 +10,14 @@ var connection = mysql.createConnection({
 //    socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
+var pool  = mysql.createPool({
+  connectionLimit : 10,
+  host            : "us-cdbr-iron-east-05.cleardb.net" || "localhost",
+  user            : "bbe26416610a5f" || "root",
+  password        : "898d203a" || "FreshChoice1",
+  database        : "heroku_ffde5ca58101024" || "burgers_db"
+});
+
 // Make connection.
 connection.connect(function(err) {
   if (err) {
@@ -19,16 +27,6 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-pool.getConnection(function(err, connection) {
-  // Use the connection
-  connection.query('SELECT something FROM sometable', function (error, results, fields) {
-    // And done with the connection.
-    connection.release();
-    // Handle error after the release.
-    if (error) throw error;
-    // Don't use the connection here, it has been returned to the pool.
-  });
-});
 
 // Export connection for our ORM to use.
 module.exports = connection;
