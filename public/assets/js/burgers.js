@@ -13,7 +13,6 @@ $(function() {
       data: newDevourState
     }).then(
       function() {
-        console.log("changed devour to", newDevour);
         location.reload();
       }
     );
@@ -33,7 +32,6 @@ $(function() {
       data: newBurger
     }).then(
       function() {
-        console.log("created new burger");
         location.reload();
       }
     );
@@ -47,7 +45,6 @@ $(function() {
       type: "DELETE",
     }).then(
       function() {
-        console.log("deleted burger", id);
         location.reload();
       }
     );

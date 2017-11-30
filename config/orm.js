@@ -1,15 +1,5 @@
 var connection = require("../config/connection.js");
 
-//function printQuestionMarks(num) {
-//  var arr = [];
-//
-//  for (var i = 0; i < num; i++) {
-//    arr.push("?");
-//  }
-//
-//  return arr.toString();
-//}
-
 //SQL syntax conversion function
 function objToSql(ob) {
   var arr = [];
@@ -51,8 +41,6 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
-
     connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
@@ -70,7 +58,6 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
