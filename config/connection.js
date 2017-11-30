@@ -1,4 +1,4 @@
-// Set up MySQL connection.
+//MySQL connection setup
 var mysql = require("mysql");
 
 var connection = mysql.createConnection({
@@ -7,10 +7,8 @@ var connection = mysql.createConnection({
   user: "bbe26416610a5f" || "root",
   password: "898d203a" || "FreshChoice1",
   database: "heroku_ffde5ca58101024" || "burgers_db"
-//    socketPath: '/var/run/mysqld/mysqld.sock'
 });
 
-// Make connection.
 connection.connect(function(err) {
   if (err) {
     console.error("error connecting: " + err.stack);
@@ -19,6 +17,5 @@ connection.connect(function(err) {
   console.log("connected as id " + connection.threadId);
 });
 
-
-// Export connection for our ORM to use.
+//Export connection to database
 module.exports = connection;
