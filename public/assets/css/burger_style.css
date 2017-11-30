@@ -1,7 +1,16 @@
+html {
+    background-image: url('../img/burger-bkgd.png')
+}
+
 body {
+    font-family: 'Hind Madurai', sans-serif;
     width: 800px;
     margin-left: auto;
     margin-right: auto
+}
+
+h1, p {
+    font-family: 'Lobster', cursive;
 }
 
 ul {
@@ -12,7 +21,7 @@ ul {
 li {
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: #efe9bb;
 }
 
 .section1 {
@@ -60,3 +69,7 @@ h2 {position: relative;
     top: 215px
 }
 
+.delete-burger, .change-devour {
+    margin-left: 10px;
+    float: right
+}
