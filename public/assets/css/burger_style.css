@@ -4,7 +4,7 @@ html {
 
 body {
     font-family: 'Hind Madurai', sans-serif;
-    width: 800px;
+    width: 900px;
     margin-left: auto;
     margin-right: auto
 }
@@ -38,11 +38,12 @@ label {
   font-weight: bold;
 }
 
-.create-form {
+.create-form, .add-burger {
     position: relative;
     top: 200px;
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+    width: 175px;
 }
 
 .create-update-form {
@@ -53,13 +54,7 @@ label {
 
 .form-group {
     position: relative;
-   
-  margin-bottom: 5px;
-}
-
-.add-burger {
-    position: relative;
-    top: 215px
+    width: 175px;
 }
 
 .delete-burger, .change-devour {
