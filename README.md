@@ -1,4 +1,4 @@
-# HW - {Burger Logger App}
+# Burger Diary
 
 ## Live Link
  - https://desolate-mountain-36608.herokuapp.com/
